@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 10f;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, 4) * Time.deltaTime;
+        // Muove la strada verso il player (asse Z positivo)
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        // Opzionale: Se la strada è troppo lontana dietro il player, distruggila
+        if (transform.position.z > 50f) 
+        {
+            Destroy(gameObject);
+        }
     }
 }
