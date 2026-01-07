@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1306897296063608800}
   - component: {fileID: 7864491447543216425}
   m_Layer: 0
-  m_Name: Street
+  m_Name: Street 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreetPrefab:
+  - {fileID: 2301906226129918306, guid: 3a77d2a7234d56242bab639eb2ec2057, type: 3}
   - {fileID: 2301906226129918306}
-  - {fileID: 2301906226129918306, guid: 23a002b06097a06419db0a1792fc3430, type: 3}
   ExitPoint: {fileID: 6630717793304693284}
 --- !u!1 &3327014975528452624
 GameObject:
@@ -213,7 +213,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7777a9f2c5e31e3458de35d151cae139, type: 2}
+  - {fileID: 2100000, guid: c0a5a2f47243c674081f77ffc304fdf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

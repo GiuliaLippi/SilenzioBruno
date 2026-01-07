@@ -5,7 +5,14 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed = 10f;
-
+    void Start()
+    {
+        Debug.Log (name);
+    }
+    void OnDestroy()
+    {
+        Debug.Log("Destroyed"+name);
+    }
     void Update()
     {
         // Muove la strada verso il player (asse Z positivo)

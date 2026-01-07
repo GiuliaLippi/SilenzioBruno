@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TriggerRoad : MonoBehaviour
 {
-    public GameObject StreetPrefab; // Il prefab da spawnare
+    public GameObject[] StreetPrefab;
+    public GameObject Prefab; // Il prefab da spawnare
     public Transform ExitPoint;
 
     private bool spawned = false;
-
+   
     void OnTriggerEnter(Collider other)
     {
         // Controlla se è il player e se non abbiamo già spawnato
@@ -18,7 +20,10 @@ public class TriggerRoad : MonoBehaviour
 
             // Spawna il nuovo pezzo esattamente sulla posizione dell'ExitPoint
             // Usiamo exitPoint.position e exitPoint.rotation per sicurezza
-            Instantiate(StreetPrefab, ExitPoint.position, ExitPoint.rotation);
+           
+            int index = Random.Range(0,StreetPrefab.Length);
+            Debug.Log("Boh" + index);
+            Instantiate(StreetPrefab[index], ExitPoint.position, ExitPoint.rotation);
 
             // Opzionale: distrugge questo pezzo dopo 10 secondi per pulizia
             Destroy(transform.parent.gameObject, 10f);
