@@ -16,10 +16,10 @@ public class Move : MonoBehaviour
     void Update()
     {
         // Muove la strada verso il player (asse Z positivo)
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
 
         // Opzionale: Se la strada è troppo lontana dietro il player, distruggila
-        if (transform.position.z > 50f) 
+        if (transform.position.x > 50f) 
         {
             Destroy(gameObject);
         }
